@@ -12,7 +12,7 @@ export default function BookingList () {
     const [spinner, setSpinner] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5000/getBookingList?email=" + loggedInUser.email)
+        fetch("https://travel-hub-server-production.up.railway.app/getBookingList?email=" + loggedInUser.email)
         .then(res => res.json())
         .then(data => {setBookingLists(data); setSpinner(false)})
     // eslint-disable-next-line react-hooks/exhaustive-deps
